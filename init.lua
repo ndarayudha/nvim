@@ -1,12 +1,1 @@
-require("core.lazy")
-require("core.remap")
-require("core.options")
-
-require("plugins.catppuccin")
-require("plugins.telescope")
-require("plugins.neo-tree")
-require("plugins.completions")
-require("plugins.treesitter")
-require("plugins.lua-line")
-require("plugins.lspconfig")
-require("plugins.none-ls")
+require("ndara")
