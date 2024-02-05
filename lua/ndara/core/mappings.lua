@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 local bind = vim.keymap.set
-local opts = { noremap = true, silent = true }
 
 bind("i", "jk", "<ESC>")
 
@@ -16,13 +15,10 @@ bind("n", "<leader>k", "<C-w>k<CR>")
 bind("n", "<leader>l", "<C-w>l<CR>")
 
 -- select all
-bind("n", "<C-a>", "gg<S-v>G")
+bind("n", "<leader>a", "gg<S-v>G")
 
 -- delete a word backwards
 bind("n", "dw", "vb_d")
-
--- Jumplist
-bind("n", "<C-m>", "<C-i>", opts)
 
 -- tab
 bind("n", "<leader>to", ":tabnew<CR>", {}) -- open new tab
@@ -37,13 +33,6 @@ bind("i", "{", "{}<left>")
 bind("i", "<", "<><left>")
 bind("i", "'", "''<left>")
 bind("i", '"', '""<left>')
-
--- terminal
-bind("t", "<A-n>", [[<C-\><C-n>]])
-bind("t", "<A-h>", [[<C-\><C-n><C-w>h]])
-bind("t", "<A-j>", [[<C-\><C-n><C-w>j]])
-bind("t", "<A-k>", [[<C-\><C-n><C-w>k]])
-bind("t", "<A-l>", [[<C-\><C-n><C-w>l]])
 
 -- lsp
 bind("n", "K", vim.lsp.buf.hover, {})

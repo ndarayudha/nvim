@@ -105,6 +105,16 @@ return {
 			require("cmp_nvim_lsp").default_capabilities()
 		)
 
+		lspconfig.arduino_language_server.setup({
+			capabilities = capabilities,
+      cmd = {
+        'arduino-language-server',
+        '-cli-config', '/home/yofan/.arduino15/arduino-cli.yaml',
+        '-cli', '/home/yofan/bin/arduino-cli',
+        '-clangd', '/usr/bin/clangd'
+      }
+		})
+
 		lspconfig.bashls.setup({
 			capabilities = capabilities,
 			cmd_env = {

@@ -11,10 +11,6 @@ return {
 					{
 						"location",
 					},
-					{
-						"datetime",
-						style = "%d-%m-%Y (%H:%M)",
-					},
 				},
 			},
 		})
