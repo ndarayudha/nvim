@@ -1,18 +1,28 @@
 vim.g.mapleader = " "
 
 local bind = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 bind("i", "jk", "<ESC>")
 
 -- window
-bind("n", "<leader>sh", "<C-w>v", {}) 
-bind("n", "<leader>sv", "<C-w>s", {}) 
-bind("n", "<leader>se", "<C-w>=", {}) 
-bind("n", "<leader>sx", ":close<CR>", {}) 
-bind("n", "<leader>h", "<C-w>h<CR>", {})
-bind("n", "<leader>j", "<C-w>j<CR>", {}) 
-bind("n", "<leader>k", "<C-w>k<CR>", {}) 
-bind("n", "<leader>l", "<C-w>l<CR>", {})
+bind("n", "<leader>sh", "<C-w>v")
+bind("n", "<leader>sv", "<C-w>s")
+bind("n", "<leader>se", "<C-w>=")
+bind("n", "<leader>sx", ":close<CR>")
+bind("n", "<leader>h", "<C-w>h<CR>")
+bind("n", "<leader>j", "<C-w>j<CR>")
+bind("n", "<leader>k", "<C-w>k<CR>")
+bind("n", "<leader>l", "<C-w>l<CR>")
+
+-- select all
+bind("n", "<C-a>", "gg<S-v>G")
+
+-- delete a word backwards
+bind("n", "dw", "vb_d")
+
+-- Jumplist
+bind("n", "<C-m>", "<C-i>", opts)
 
 -- tab
 bind("n", "<leader>to", ":tabnew<CR>", {}) -- open new tab
@@ -35,12 +45,7 @@ bind("t", "<A-j>", [[<C-\><C-n><C-w>j]])
 bind("t", "<A-k>", [[<C-\><C-n><C-w>k]])
 bind("t", "<A-l>", [[<C-\><C-n><C-w>l]])
 
--- neo-tree
-bind("n", "<C-o>", ":Neotree filesystem reveal left<CR>", {})
-bind("n", "<C-k>", ":Neotree filesystem close<CR>", {})
-
 -- lsp
 bind("n", "K", vim.lsp.buf.hover, {})
 bind("n", "gd", vim.lsp.buf.definition, {})
 bind({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-
