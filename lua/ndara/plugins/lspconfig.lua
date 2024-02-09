@@ -105,14 +105,19 @@ return {
 			require("cmp_nvim_lsp").default_capabilities()
 		)
 
+		local util = require("lspconfig/util")
+
 		lspconfig.arduino_language_server.setup({
 			capabilities = capabilities,
-      cmd = {
-        'arduino-language-server',
-        '-cli-config', '/home/yofan/.arduino15/arduino-cli.yaml',
-        '-cli', '/home/yofan/bin/arduino-cli',
-        '-clangd', '/usr/bin/clangd'
-      }
+			cmd = {
+				"arduino-language-server",
+				"-cli-config",
+				"/home/yofan/.arduino15/arduino-cli.yaml",
+				"-cli",
+				"/home/yofan/bin/arduino-cli",
+				"-clangd",
+				"/usr/bin/clangd",
+			},
 		})
 
 		lspconfig.bashls.setup({
@@ -162,6 +167,9 @@ return {
 
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+			root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 			settings = {
 				gopls = {
 					experimentalPostfixCompletions = true,
@@ -218,6 +226,10 @@ return {
 					telemetry = { enable = false },
 				},
 			},
+		})
+
+		lspconfig.mdx_analyzer.setup({
+			capabilities = capabilities,
 		})
 
 		lspconfig.rust_analyzer.setup({

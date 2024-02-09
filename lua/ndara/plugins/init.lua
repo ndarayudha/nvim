@@ -15,9 +15,9 @@ require("lazy").setup({
 	{
 		import = "ndara.plugins.autopairs",
 	},
-  {
-    import = "ndara.plugins.barbecue"
-  },
+	{
+		import = "ndara.plugins.barbecue",
+	},
 	{
 		import = "ndara.plugins.catppuccin",
 	},
@@ -70,7 +70,7 @@ require("lazy").setup({
 		import = "ndara.plugins.typescript-tools",
 	},
 	{
-		import = "ndara.plugins.which_key",
+		import = "ndara.plugins.vim_tmux_navigator",
 	},
 }, {
 	defaults = {

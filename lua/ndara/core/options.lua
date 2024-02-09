@@ -61,6 +61,7 @@ vim.opt.wrap = true
 vim.filetype.add({
 	extension = {
 		env = "dotenv",
+		mdx = "mdx",
 	},
 	filename = {
 		[".env"] = "dotenv",
