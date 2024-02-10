@@ -18,7 +18,7 @@ return {
 					name = "Fish",
 				},
 				log = {
-					icon = "󰺮",
+					icon = "",
 					color = colors.yellow,
 					name = "Log",
 				},
@@ -173,7 +173,7 @@ return {
 					name = "Lua",
 				},
 				txt = {
-					icon = "󰈙",
+					icon = "",
 					color = colors.blue,
 					name = "Txt",
 				},
@@ -445,27 +445,27 @@ return {
 					name = "Nvmrc",
 				},
 				[".eslintrc.js"] = {
-					icon = "",
+					icon = "",
 					color = colors.mauve,
 					name = "EslintrcJs",
 				},
 				[".eslintrc.cjs"] = {
-					icon = "",
+					icon = "",
 					color = colors.mauve,
 					name = "EslintrcCjs",
 				},
 				[".eslintrc.json"] = {
-					icon = "",
+					icon = "",
 					color = colors.mauve,
 					name = "EslintrcJson",
 				},
 				[".eslintrc.yml"] = {
-					icon = "",
+					icon = "",
 					color = colors.mauve,
 					name = "EslintrcYml",
 				},
 				[".eslintignore"] = {
-					icon = "",
+					icon = "",
 					color = colors.overlay0,
 					name = "EslintIgnore",
 				},
